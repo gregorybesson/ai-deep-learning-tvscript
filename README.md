@@ -43,3 +43,11 @@ lisa_simpson:" tell you... nobody gives now dance.
 seymour_skinner: homer, okay? that's it got.
 homer_simpson: moe, you know, who are you care for me into our song to play.
 ```
+
+## improvements
+stack multiple LSTM cells + add Dropout
+```
+drop = tf.contrib.rnn.DropoutWrapper(lstm, output_keep_prob = 0.5)
+# stack up multiple LSTM Layers, for deep learning
+cell = tf.contrib.rnn.MultiRNNCell([drop] * 1)
+```
